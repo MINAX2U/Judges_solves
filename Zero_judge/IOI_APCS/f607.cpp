@@ -24,7 +24,7 @@ int main(){
 
     for(auto [i,x]:v){
         st.insert(x);
-        set<int>::iterator it = st.lower_bound(x);
+        auto it = st.lower_bound(x);//set<int>::iterator it = st.lower_bound(x);
         ans += (*next(it))-(*prev(it));
     }
 
